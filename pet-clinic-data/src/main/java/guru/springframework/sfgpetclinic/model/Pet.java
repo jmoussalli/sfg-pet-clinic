@@ -6,7 +6,7 @@ import java.time.LocalDate;
  * Package :  guru.springframework.sfgpetclinic.model
  * Created by jerom on 24/11/2020 at 18:21
  */
-public class Pet {
+public class Pet extends BaseEntity {
 
     private PetType petType;
     private Owner owner;
