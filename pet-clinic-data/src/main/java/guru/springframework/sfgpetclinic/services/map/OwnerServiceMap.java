@@ -2,6 +2,7 @@ package guru.springframework.sfgpetclinic.services.map;
 
 import guru.springframework.sfgpetclinic.model.Owner;
 import guru.springframework.sfgpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
@@ -9,6 +10,7 @@ import java.util.Set;
  * Package :  guru.springframework.sfgpetclinic.services.map
  * Created by jerom on 06/12/2020 at 15:20
  */
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
@@ -27,9 +29,7 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     }
 
     @Override
-    public void delete(Owner object) {
-        super.delete(object);
-    }
+    public void delete(Owner object) { super.delete(object); }
 
     @Override
     public void deleteById(Long id) {
@@ -37,7 +37,5 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     }
 
     @Override
-    public Owner findByLastName(String lastName) {
-        return null;
-    }
+    public Owner findByLastName(String lastName) { return null; }
 }
