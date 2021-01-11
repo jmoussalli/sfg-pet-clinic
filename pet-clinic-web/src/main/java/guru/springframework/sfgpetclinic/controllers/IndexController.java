@@ -15,4 +15,10 @@ public class IndexController {
 
         return "Index";
     }
+
+    @RequestMapping("/oups")
+    public String oups() {
+        return "notImplemented";
+    }
+
 }
