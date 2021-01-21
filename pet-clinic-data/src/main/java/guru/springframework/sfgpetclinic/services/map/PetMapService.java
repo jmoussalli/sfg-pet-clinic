@@ -10,7 +10,7 @@ import java.util.Set;
  * Created by jerom on 07/12/2020 at 12:40
  */
 @Service
-public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetService {
+public class PetMapService extends AbstractMapService<Pet,Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
