@@ -1,6 +1,5 @@
 # Getting Started
 
-<a href="https://circleci.com/gh/jmoussalli/sfg-pet-clinic"><img src="https://circleci.com/gh/jmoussalli/sfg-pet-clinic.svg?style=shield"></a>
 ### Reference Documentation
 For further reference, please consider the following sections:
 
