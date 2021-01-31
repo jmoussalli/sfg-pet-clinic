@@ -1,5 +1,4 @@
 <a href="https://circleci.com/gh/jmoussalli/sfg-pet-clinic"><img src="https://circleci.com/gh/jmoussalli/sfg-pet-clinic.svg?style=shield"></a>
-
 # sfg-pet-clinic
 
 SFG Pet Clinic
