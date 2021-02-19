@@ -8,10 +8,10 @@ import guru.springframework.sfgpetclinic.services.PetTypeService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 /**
- * Package :  guru.springframework.sfgpetclinic.services.map
  * Created by jerom on 06/12/2020 at 15:20
  */
 @Service
@@ -39,23 +39,24 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
     @Override
     public Owner save(Owner object) {
 
-        if (object != null) {
+        if(object != null){
             if (object.getPets() != null) {
                 object.getPets().forEach(pet -> {
-                    if (pet.getPetType() != null) {
-                        if (pet.getPetType().getId() == null) {
+                    if (pet.getPetType() != null){
+                        if(pet.getPetType().getId() == null){
                             pet.setPetType(petTypeService.save(pet.getPetType()));
                         }
                     } else {
                         throw new RuntimeException("Pet Type is required");
                     }
 
-                    if (pet.getId() == null) {
+                    if(pet.getId() == null){
                         Pet savedPet = petService.save(pet);
                         pet.setId(savedPet.getId());
                     }
                 });
             }
+
             return super.save(object);
 
         } else {
@@ -64,7 +65,9 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
     }
 
     @Override
-    public void delete(Owner object) { super.delete(object); }
+    public void delete(Owner object) {
+        super.delete(object);
+    }
 
     @Override
     public void deleteById(Long id) {
@@ -78,6 +81,13 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
                 .filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
                 .findFirst()
                 .orElse(null);
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+
+        // todo - impl
+        return null;
     }
 
 }
