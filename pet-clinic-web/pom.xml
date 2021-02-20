@@ -73,9 +73,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-            <version>2.0.1.Final</version>
+            <groupId>guru.springframework</groupId>
+            <artifactId>pet-clinic-web</artifactId>
+            <version>0.0.4-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
