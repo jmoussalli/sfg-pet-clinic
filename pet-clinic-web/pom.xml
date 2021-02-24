@@ -72,11 +72,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>guru.springframework</groupId>
-            <artifactId>pet-clinic-web</artifactId>
-            <version>0.0.4-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
     <build>
